@@ -2,7 +2,11 @@ export default class Fizetes {
     private _aurk: string[] = [];
 
     public get arukSzama(): number {
-        return this._aurk.length;
+        if (this._aurk) {
+            return this._aurk.length;
+        } else {
+            return -1;
+        }
     }
     public get kulonbozoArucikkek(): string[] {
         const arucikkek: string[] = [];
