@@ -19,7 +19,7 @@ export default class Megoldas {
         let seged: string[] = [];
         fs.readFileSync(forras)
             .toString()
-            .split("\r\n")
+            .split("\n")
             .forEach(l => {
                 const aktsor = l.trim();
                 if (aktsor === "F") {
