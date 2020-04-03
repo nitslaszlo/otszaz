@@ -76,18 +76,18 @@ export default class Content {
 
         fs.readFileSync("penztar.txt")
             .toString()
-            .split("\r\n")
+            .split("\n")
             .forEach(l => {
-                res.write(l + "\n");
+                res.write(l.trim() + "\n");
             });
 
         res.write("Az osszeg.txt kiírása\n\n");
 
         fs.readFileSync("osszeg.txt")
             .toString()
-            .split("\r\n")
+            .split("\n")
             .forEach(l => {
-                res.write(l + "\n");
+                res.write(l.trim() + "\n");
             });
         // <---- Fejezd be a kódolást
 
